@@ -5,11 +5,11 @@ int bsearch(int arr[],int len,int ele)
 {
     int low=0,high=len-1;
     
-    while (low<high)
+    while (low<=high)
     {
         int mid=(low+high)/2;
         if(arr[mid]==ele)
-        return ele;
+        return mid;
         else if (arr[mid] > ele)
         {
             high=mid-1;
@@ -35,9 +35,9 @@ int main()
     }
     cout<<"Enter the element to be searched"<<endl;
     cin>>element;
-    if(element==bsearch(arr,len,element))
+    if(bsearch(arr,len,element)!=-1)
     {
-        cout<<"Element found "<<bsearch(arr,len,element);
+        cout<<"Element found At index "<<bsearch(arr,len,element);
     }
     else
     {
