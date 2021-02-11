@@ -13,7 +13,7 @@ int main()
         cin>>arr[i];
     }
     unordered_set<int> us(arr,arr+len);
-    cout<<"Number of distinct elements are.. "<<us.size();
+    cout<<"Number of distinct elements are.. "<<us.size()<<endl;
     return 0;
 
 }
